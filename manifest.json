@@ -1,10 +1,12 @@
 {
-  "manifest_version": 2,
+  "default_locale": "en",
+  "manifest_version": 3,
   "name": "Reduction",
   "description": "minimal new tab page",
   "version": "1.0.0",
   "author": "Maneesh Wijewardhana",
   "chrome_settings_overrides": {
-    "newtab": "newtab.html"
+    "newtab": "newtab.html",
+    "encoding": "UTF-8"
   }
 }
