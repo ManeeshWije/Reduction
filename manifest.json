@@ -14,6 +14,15 @@
   "permissions": [
     "http://quotes.rest/",
     "https://rapidapi.com/theapiguy/api/world-clock?endpoint=apiendpoint_afd95fbf-b915-4ec9-99e7-13550b5ebe78",
-    "https://quotes15.p.rapidapi.com/quotes/random/"
+    "https://quotes15.p.rapidapi.com/quotes/random/",
+    "https://api.unsplash.com/search/photos?query=land scape&client_id=WQeGSnwU4L1Z2bIRlSWOAlgazKegU7qG_lTbLcoJKMI"
+  ],
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": ["newtab.css"],
+      "js": ["jquery.js", "newtab.js"]
+    }
   ]
 }

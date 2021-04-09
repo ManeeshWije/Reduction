@@ -1,43 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <style>
-      @import url(https://fonts.googleapis.com/css?family=PT+Serif:400italic);
-      @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
-      body {
-        background-color: rgb(41, 41, 41);
-        padding: 0;
-      }
-      #quoteblock {
-        font-family: "PT Serif", serif;
-        text-align: center;
-        color: white;
-        font-size: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        padding: 0px 100px 0px 100px;
-      }
-      #clock {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: rgb(255, 255, 255);
-        font-size: 195px;
-        font-family: "Prata", serif;
-      }
-
-      button {
-        padding: 2em;
-        position: relative;
-        top: 550px;
-        left: 450px;
-      }
-    </style>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="newtab.css" />
     <title>Reduction</title>
   </head>
   <body>
@@ -48,7 +14,13 @@
     <div class="clock">
       <h1 id="clock"></h1>
     </div>
-
-    <script type="text/javascript" src="newtab.js"></script>
   </body>
+
+  <div class="img-wrapper">
+    <img class="img-to-display" />
+  </div>
+  <script type="text/javascript" src="jquery.js"></script>
+
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+  <script type="text/javascript" src="newtab.js"></script>
 </html>

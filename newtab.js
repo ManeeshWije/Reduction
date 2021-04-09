@@ -1,47 +1,9 @@
-//$(function () {
-//var url = "http://quotes.rest/qod.json";
-//var quote = $("#quoteblock"); // the id of the heading
-//$.get(url, function (data) {
-//var the_quote = data;
-//quote.text(the_quote.contents.quotes[0].quote);
-//var author = $("#author"); // id of author
-//author.text(the_quote.contents.quotes[0].author);
-//});
-//});
-
-//const settings = {
-//async: true,
-//crossDomain: true,
-//url: "https://type.fit/api/quotes",
-//method: "GET",
-//};
-
-//$.ajax(settings).done(function (response) {
-//const data = JSON.parse(response);
-//console.log(data);
-//});
-
-//const settings = {
-//async: true,
-//crossDomain: true,
-//url: "https://quotes15.p.rapidapi.com/quotes/random/",
-//method: "GET",
-//headers: {
-//"x-rapidapi-key": "442d139cacmsh193c5fcc792d3b5p1007a0jsn6715d85ce4d3",
-//"x-rapidapi-host": "quotes15.p.rapidapi.com",
-//},
-//};
-
-//$.ajax(settings).done(function (response) {
-//console.log(response);
-//});
-
 let quote;
 function quotes() {
   fetch("https://api.quotable.io/random")
     .then((response) => response.json())
     .then((data) => {
-      console.log(`${data.content} —${data.author}`);
+      //console.log(`${data.content} —${data.author}`);
       quote = `${data.content} -${data.author}`;
       document.getElementById("quoteblock").innerHTML = quote;
     });
@@ -70,3 +32,35 @@ let clock = () => {
 };
 
 clock();
+
+//function imageGen() //{
+//let url =
+//"https://api.unsplash.com/search/photos?query=land scape&client_id=WQeGSnwU4L1Z2bIRlSWOAlgazKegU7qG_lTbLcoJKMI";
+//let randomNum = Math.floor(Math.random() * 10);
+//fetch(url)
+//.then(function (data) {
+//return data.json();
+//})
+
+//.then(function (data) {
+//console.log(data);
+//let result = data.results[randomNum];
+//return result.urls.regular;
+//$("#result").html(result);
+//});
+//}
+//imageGen();
+//
+const requestUrl =
+  "https://api.unsplash.com/search/photos?query=land scape&client_id=WQeGSnwU4L1Z2bIRlSWOAlgazKegU7qG_lTbLcoJKMI";
+
+function getNewImage() {
+  let randomNumber = Math.floor(Math.random() * 10);
+  return fetch(requestUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      let allImages = data.results[randomNumber];
+      return allImages.urls.regular;
+    });
+}
+getNewImage();
