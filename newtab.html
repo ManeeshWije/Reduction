@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=PT+Serif:400italic);
+      @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+
+      * {
+        padding: 0;
+      }
+      body {
+        background-color: rgb(41, 41, 41);
+        height: 100vh;
+        width: auto;
+      }
+
+      .quote {
+        color: #ffffff;
+        position: relative;
+        top: 500px;
+        text-align: center;
+      }
+
+      #quoteblock {
+        font-family: "PT Serif", serif;
+        text-shadow: 2px 2px 3px rgba(150, 150, 150, 0.75);
+        font-size: 2em;
+      }
+
+      #author {
+        font-family: "PT Serif", serif;
+        text-align: center;
+        color: #fff;
+        text-shadow: 2px 2px 3px rgba(150, 150, 150, 0.75);
+      }
+      #clock {
+        position: relative;
+        text-align: center;
+        align-items: center;
+        bottom: 450px;
+        color: rgb(255, 255, 255);
+        font-size: 195px;
+        font-family: "Prata", serif;
+      }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Reduction</title>
+  </head>
+  <body>
+    <div class="quote">
+      <h1 id="quoteblock"></h1>
+      <h3 id="author"></h3>
+    </div>
+    <div class="clock">
+      <h1 id="clock"></h1>
+    </div>
+
+    <script src="newtab.js"></script>
+  </body>
+</html>
