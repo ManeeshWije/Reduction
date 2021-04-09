@@ -1,12 +1,19 @@
 {
-  "default_locale": "en",
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Reduction",
   "description": "minimal new tab page",
   "version": "1.0.0",
-  "author": "Maneesh Wijewardhana",
-  "chrome_settings_overrides": {
-    "newtab": "newtab.html",
-    "encoding": "UTF-8"
-  }
+  "author": {
+    "name": "Maneesh Wijewardhana",
+    "email": "m.mwije1@gmail.com",
+    "url": "https://www.linkedin.com/in/maneesh-wijewardhana-5926741b6/"
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": [
+    "http://quotes.rest/",
+    "https://rapidapi.com/theapiguy/api/world-clock?endpoint=apiendpoint_afd95fbf-b915-4ec9-99e7-13550b5ebe78",
+    "https://quotes15.p.rapidapi.com/quotes/random/"
+  ]
 }

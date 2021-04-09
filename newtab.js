@@ -1,40 +1,52 @@
-// $(function() {
-//     var url = "http://quotes.rest/qod.json";
-//     var quote = $("#quoteblock");// the id of the heading
-//     $.get(url, function (data) {
-//     var the_quote = data;
-//     quote.text(the_quote.contents.quotes[0].quote);
-//     var author = $("#author");// id of author
-//     author.text(the_quote.contents.quotes[0].author);
-//     });
-// });
+//$(function () {
+//var url = "http://quotes.rest/qod.json";
+//var quote = $("#quoteblock"); // the id of the heading
+//$.get(url, function (data) {
+//var the_quote = data;
+//quote.text(the_quote.contents.quotes[0].quote);
+//var author = $("#author"); // id of author
+//author.text(the_quote.contents.quotes[0].author);
+//});
+//});
 
-// const settings = {
-// 	"async": true,
-// 	"crossDomain": true,
-// 	"url": "https://type.fit/api/quotes",
-// 	"method": "GET"
-//   }
+//const settings = {
+//async: true,
+//crossDomain: true,
+//url: "https://type.fit/api/quotes",
+//method: "GET",
+//};
 
-//   $.ajax(settings).done(function (response) {
-// 	const data = JSON.parse(response);
-// 	console.log(data);
-//   });
+//$.ajax(settings).done(function (response) {
+//const data = JSON.parse(response);
+//console.log(data);
+//});
 
-const settings = {
-  async: true,
-  crossDomain: true,
-  url: "https://quotes15.p.rapidapi.com/quotes/random/",
-  method: "GET",
-  headers: {
-    "x-rapidapi-key": "442d139cacmsh193c5fcc792d3b5p1007a0jsn6715d85ce4d3",
-    "x-rapidapi-host": "quotes15.p.rapidapi.com",
-  },
-};
+//const settings = {
+//async: true,
+//crossDomain: true,
+//url: "https://quotes15.p.rapidapi.com/quotes/random/",
+//method: "GET",
+//headers: {
+//"x-rapidapi-key": "442d139cacmsh193c5fcc792d3b5p1007a0jsn6715d85ce4d3",
+//"x-rapidapi-host": "quotes15.p.rapidapi.com",
+//},
+//};
 
-$.ajax(settings).done(function (response) {
-  console.log(response);
-});
+//$.ajax(settings).done(function (response) {
+//console.log(response);
+//});
+
+let quote;
+function quotes() {
+  fetch("https://api.quotable.io/random")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(`${data.content} —${data.author}`);
+      quote = `${data.content} -${data.author}`;
+      document.getElementById("quoteblock").innerHTML = quote;
+    });
+}
+quotes();
 
 let clock = () => {
   let date = new Date();
