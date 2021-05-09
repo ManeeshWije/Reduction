@@ -27,7 +27,7 @@ let clock = () => {
 	secs = secs < 10 ? "0" + secs : secs;
 
 	let time = `${hrs}:${mins}:${secs}:${period}`;
-	document.getElementById("clock").innerText = time;
+	document.getElementById("clock").innerHTML = time;
 	setTimeout(clock, 1000);
 };
 clock();
@@ -40,6 +40,9 @@ $.ajax({
 		"https://api.unsplash.com/search/photos?query=land scape&client_id=WQeGSnwU4L1Z2bIRlSWOAlgazKegU7qG_lTbLcoJKMI",
 	success: function (data) {
 		console.log(data);
-		images = $("#image").append(`<img src=${data.results[0].urls.regular}/>`);
+		var randNum = Math.floor(Math.random() * 10);
+		images = $("#image").append(
+			`<img src=${data.results[randNum].urls.regular}/>`
+		);
 	},
 });
