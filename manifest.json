@@ -3,6 +3,10 @@
 	"name": "Reduction",
 	"description": "minimal new tab page",
 	"version": "1.0.0",
+	"icons": { "128": "icon_128.png" },
+	"browser_action": {
+		"default_icon": "icon.png"
+	},
 	"author": {
 		"name": "Maneesh Wijewardhana",
 		"email": "m.mwije1@gmail.com",
