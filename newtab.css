@@ -1,9 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Serif:400italic);
 @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+* {
+	overflow: visible;
+}
 body {
 	background-color: rgb(41, 41, 41);
 	margin: 0;
 	padding: 0;
+	overflow: visible;
 }
 .container {
 	display: flex;
@@ -35,18 +39,32 @@ body {
 	position: absolute;
 	font-weight: bold;
 	text-shadow: 2px 2px 4px #000000;
+	text-align: center;
 }
-.container .user {
+.user {
 	font-family: "PT Serif", serif;
 	color: white;
 	font-weight: bold;
 	font-size: 15px;
 	position: absolute;
-	top: 80%;
-	text-align: center;
+	bottom: 0;
+	left: 0;
 	text-shadow: 2px 2px 4px #000000;
-	padding: 0px 100px 0px 100px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
 }
+a {
+	color: white;
+	text-decoration: none;
+}
+/* .user {
+	display: block;
+	position: absolute;
+	bottom: 1px;
+	left: 1px;
+} */
+
 @media only screen and (max-width: 1250px) {
 	.container .quote {
 		top: 65%;

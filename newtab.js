@@ -46,7 +46,11 @@ $.ajax({
 			`<img src=${data.results[randNum].urls.regular}/>`
 		);
 		user = $("#credits").append(
-			`<h3>Photo Credits: ${data.results[randNum].user.name}</h3>`
+			// `<h3>Photo Credits: ${data.results[randNum].user.name}</h3>
+			`
+			<a href="${data.results[randNum].user.links.html}">${data.results[randNum].user.name}</a>
+			<a href="https://unsplash.com/">Unsplash</a>
+			`
 		);
 	},
 });
