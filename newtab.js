@@ -33,6 +33,7 @@ let clock = () => {
 clock();
 
 var images = "";
+var user = "";
 
 $.ajax({
 	type: "GET",
@@ -43,6 +44,9 @@ $.ajax({
 		var randNum = Math.floor(Math.random() * 10);
 		images = $("#image").append(
 			`<img src=${data.results[randNum].urls.regular}/>`
+		);
+		user = $("#credits").append(
+			`<h3>Photo Credits: ${data.results[randNum].user.name}</h3>`
 		);
 	},
 });

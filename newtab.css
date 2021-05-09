@@ -2,69 +2,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
 body {
 	background-color: rgb(41, 41, 41);
-	overflow: hidden;
+	margin: 0;
+	padding: 0;
 }
-/* #quoteblock {
-	font-family: "PT Serif", serif;
-	/* text-align: center; */
-/* color: white;
-	font-size: 20px;
-	/* display: flex; */
-/* justify-content: center;
-	align-items: center; */
-/* padding: 0px 100px 0px 100px; */
-/* }
-#clock {
-	display: flex;
-	/* justify-content: center;
-	align-items: center; */
-/* color: rgb(255, 255, 255); */
-/* font-size: 195px;
-	font-family: "Prata", serif; */
-/* } */
-/* .container {
-	display: flex;
-	position: relative;
-	justify-content: center;
-	align-items: center;
-}
-.quote {
-	position: absolute;
-	font-family: "PT Serif", serif;
-	text-align: center;
-	color: white;
-	font-size: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 0px 100px 0px 100px;
-}
-.clock {
-	position: absolute;
-	justify-content: center;
-	align-items: center;
-	color: rgb(255, 255, 255);
-	font-size: 100px;
-	font-family: "Prata", serif;
-}
-.unsplash img {
-	position: absolute;
-	width: 100%;
-} 
-/*  */
 .container {
 	display: flex;
 	position: relative;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	flex-wrap: wrap;
 }
-
 .container .unsplash img {
 	height: 100vh;
-	width: 200vh;
+	width: 100%;
 }
-
 .container .quote {
 	font-family: "PT Serif", serif;
 	color: white;
@@ -74,7 +26,6 @@ body {
 	top: 60%;
 	text-align: center;
 	text-shadow: 2px 2px 4px #000000;
-
 	padding: 0px 100px 0px 100px;
 }
 .container .time {
@@ -84,4 +35,26 @@ body {
 	position: absolute;
 	font-weight: bold;
 	text-shadow: 2px 2px 4px #000000;
+}
+.container .user {
+	font-family: "PT Serif", serif;
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+	position: absolute;
+	top: 80%;
+	text-align: center;
+	text-shadow: 2px 2px 4px #000000;
+	padding: 0px 100px 0px 100px;
+}
+@media only screen and (max-width: 1250px) {
+	.container .quote {
+		top: 65%;
+	}
+	.container .time {
+		font-size: 100px;
+	}
+	.container .user {
+		top: 85%;
+	}
 }
