@@ -38,7 +38,7 @@ var user = "";
 $.ajax({
 	type: "GET",
 	url:
-		"https://api.unsplash.com/search/photos?query=land scape&client_id=WQeGSnwU4L1Z2bIRlSWOAlgazKegU7qG_lTbLcoJKMI",
+		"https://api.unsplash.com/search/photos?query=land scape&orientation=landscape&client_id=WQeGSnwU4L1Z2bIRlSWOAlgazKegU7qG_lTbLcoJKMI",
 	success: function (data) {
 		console.log(data);
 		var randNum = Math.floor(Math.random() * 10);

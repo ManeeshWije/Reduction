@@ -7,7 +7,7 @@ body {
 	background-color: rgb(41, 41, 41);
 	margin: 0;
 	padding: 0;
-	overflow: visible;
+	overflow: hidden;
 }
 .container {
 	display: flex;
@@ -17,10 +17,12 @@ body {
 	flex-direction: column;
 	flex-wrap: wrap;
 }
+
 .container .unsplash img {
-	height: 100vh;
 	width: 100%;
+	height: 100vh;
 }
+
 .container .quote {
 	font-family: "PT Serif", serif;
 	color: white;
