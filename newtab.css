@@ -1,36 +1,25 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Serif:400italic);
 @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
 body {
-  background-color: rgb(41, 41, 41);
-  padding: 0;
+	background-color: rgb(41, 41, 41);
+	padding: 0;
 }
 #quoteblock {
-  font-family: "PT Serif", serif;
-  text-align: center;
-  color: white;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  padding: 0px 100px 0px 100px;
+	font-family: "PT Serif", serif;
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	padding: 0px 100px 0px 100px;
 }
 #clock {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(255, 255, 255);
-  font-size: 195px;
-  font-family: "Prata", serif;
-}
-
-/*button {*/
-/*padding: 2em;*/
-/*position: relative;*/
-/*top: 550px;*/
-/*left: 450px;*/
-/*}*/
-
-img {
-  width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgb(255, 255, 255);
+	font-size: 195px;
+	font-family: "Prata", serif;
 }
