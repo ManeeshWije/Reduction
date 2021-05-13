@@ -5,7 +5,7 @@
 }
 body {
 	background-color: rgb(41, 41, 41);
-<<<<<<< HEAD
+
 	padding: 0;
 }
 #quoteblock {
@@ -26,7 +26,7 @@ body {
 	color: rgb(255, 255, 255);
 	font-size: 195px;
 	font-family: "Prata", serif;
-=======
+
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
@@ -99,5 +99,5 @@ a {
 	.container .user {
 		top: 85%;
 	}
->>>>>>> d50a54f10ebc56dd34192a35b5a214c2239bb763
+
 }

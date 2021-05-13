@@ -27,16 +27,15 @@ let clock = () => {
 	secs = secs < 10 ? "0" + secs : secs;
 
 	let time = `${hrs}:${mins}:${secs}:${period}`;
-<<<<<<< HEAD
+
 	document.getElementById("clock").innerText = time;
-=======
+
 	document.getElementById("clock").innerHTML = time;
->>>>>>> d50a54f10ebc56dd34192a35b5a214c2239bb763
+
 	setTimeout(clock, 1000);
 };
 clock();
-<<<<<<< HEAD
-=======
+
 
 var images = "";
 var user = "";
@@ -60,4 +59,4 @@ $.ajax({
 		);
 	},
 });
->>>>>>> d50a54f10ebc56dd34192a35b5a214c2239bb763
+
