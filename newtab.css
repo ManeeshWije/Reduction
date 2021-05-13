@@ -1,7 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Serif:400italic);
 @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+* {
+	overflow: visible;
+}
 body {
 	background-color: rgb(41, 41, 41);
+<<<<<<< HEAD
 	padding: 0;
 }
 #quoteblock {
@@ -22,4 +26,78 @@ body {
 	color: rgb(255, 255, 255);
 	font-size: 195px;
 	font-family: "Prata", serif;
+=======
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.container {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.container .unsplash img {
+	width: 100%;
+	height: 100vh;
+}
+
+.container .quote {
+	font-family: "PT Serif", serif;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	position: absolute;
+	top: 60%;
+	text-align: center;
+	text-shadow: 2px 2px 4px #000000;
+	padding: 0px 100px 0px 100px;
+}
+.container .time {
+	font-family: "Prata", serif;
+	color: rgb(255, 255, 255);
+	font-size: 195px;
+	position: absolute;
+	font-weight: bold;
+	text-shadow: 2px 2px 4px #000000;
+	text-align: center;
+}
+.user {
+	font-family: "PT Serif", serif;
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-shadow: 2px 2px 4px #000000;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+/* .user {
+	display: block;
+	position: absolute;
+	bottom: 1px;
+	left: 1px;
+} */
+
+@media only screen and (max-width: 1250px) {
+	.container .quote {
+		top: 65%;
+	}
+	.container .time {
+		font-size: 100px;
+	}
+	.container .user {
+		top: 85%;
+	}
+>>>>>>> d50a54f10ebc56dd34192a35b5a214c2239bb763
 }

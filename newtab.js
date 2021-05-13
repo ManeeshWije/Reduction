@@ -27,8 +27,37 @@ let clock = () => {
 	secs = secs < 10 ? "0" + secs : secs;
 
 	let time = `${hrs}:${mins}:${secs}:${period}`;
+<<<<<<< HEAD
 	document.getElementById("clock").innerText = time;
+=======
+	document.getElementById("clock").innerHTML = time;
+>>>>>>> d50a54f10ebc56dd34192a35b5a214c2239bb763
 	setTimeout(clock, 1000);
 };
-
 clock();
+<<<<<<< HEAD
+=======
+
+var images = "";
+var user = "";
+
+$.ajax({
+	type: "GET",
+	url:
+		"https://api.unsplash.com/search/photos?query=land scape&orientation=landscape&client_id=WQeGSnwU4L1Z2bIRlSWOAlgazKegU7qG_lTbLcoJKMI",
+	success: function (data) {
+		console.log(data);
+		var randNum = Math.floor(Math.random() * 10);
+		images = $("#image").append(
+			`<img src=${data.results[randNum].urls.regular}/>`
+		);
+		user = $("#credits").append(
+			// `<h3>Photo Credits: ${data.results[randNum].user.name}</h3>
+			`
+			<a href="${data.results[randNum].user.links.html}">${data.results[randNum].user.name}</a>
+			<a href="https://unsplash.com/">Unsplash</a>
+			`
+		);
+	},
+});
+>>>>>>> d50a54f10ebc56dd34192a35b5a214c2239bb763
