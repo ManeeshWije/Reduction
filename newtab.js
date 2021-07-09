@@ -30,8 +30,6 @@ let clock = () => {
 
   document.getElementById("clock").innerText = time;
 
-  document.getElementById("clock").innerHTML = time;
-
   setTimeout(clock, 1000);
 };
 clock();
