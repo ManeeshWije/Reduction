@@ -1,3 +1,58 @@
+window.addEventListener("load", () => {
+  let long;
+  let lat;
+  let temperatureDescription = document.querySelector(
+    ".temperature-description"
+  );
+  let temperatureDegree = document.querySelector(".temperature-degree");
+  let locationTimezone = document.querySelector(".location-timezone");
+  let temperatureSection = document.querySelector(".degree-section");
+  let temperatureSpan = document.querySelector(".temperature span");
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      long = position.coords.longitude;
+      lat = position.coords.latitude;
+      const proxy = "https://cors-anywhere.herokuapp.com/";
+      //      const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&APPID=0c51f527ada0e8093d2d318342a58203`;
+      const api = `${proxy}https://api.darksky.net/forecast/fd9d9c6418c23d94745b836767721ad1/${lat},${long}`;
+      fetch(api)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+          const { temperature, summary, icon } = data.currently;
+          let celsius = (temperature - 32) * (5 / 9);
+          let fahrenheit = temperature * (9 / 5) + 32;
+
+          temperatureDegree.textContent = Math.floor(celsius);
+          temperatureSpan.textContent = "C";
+          temperatureDescription.textContent = summary;
+          locationTimezone.textContent = data.timezone;
+
+          setIcons(icon, document.querySelector(".icon"));
+
+          temperatureSection.addEventListener("click", () => {
+            if (temperatureSpan.textContent === "C") {
+              temperatureSpan.textContent = "F";
+              temperatureDegree.textContent = temperature;
+            } else if (temperatureSpan.textContent === "F") {
+              temperatureSpan.textContent = "C";
+              temperatureDegree.textContent = Math.floor(celsius);
+            }
+          });
+        });
+    });
+  }
+  function setIcons(icon, iconID) {
+    const skycons = new Skycons({ color: "white" });
+    const currentIcon = icon.replace(/-/g, "_").toUpperCase();
+    skycons.play();
+    return skycons.set(iconID, Skycons[currentIcon]);
+  }
+});
+
 let quote;
 function quotes() {
   fetch("https://api.quotable.io/random")

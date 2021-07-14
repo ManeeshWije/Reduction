@@ -77,6 +77,60 @@ a {
   text-decoration: none;
 }
 
+.location {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding-left: 10px;
+  color: white;
+  align-items: center;
+  font-family: "PT Serif", serif;
+  text-shadow: 2px 2px 4px #000000;
+  text-align: center;
+}
+.temperature {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  left: 0px;
+  top: 71px;
+  justify-content: center;
+  padding-left: 10px;
+  align-content: center;
+  color: white;
+  font-family: "PT Serif", serif;
+  font-size: 15px;
+  text-shadow: 2px 2px 4px #000000;
+}
+.icon {
+  padding-left: 20px;
+  padding-top: 20px;
+  align-content: center;
+  width: 100px;
+}
+
+.degree-section {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+}
+.degree-section span {
+  margin: 10px;
+  font-size: 30px;
+  text-shadow: 2px 2px 4px #000000;
+  align-items: center;
+  justify-content: center;
+}
+.degree-section h2 {
+  font-size: 30px;
+  text-shadow: 2px 2px 4px #000000;
+  align-items: center;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 1250px) {
   /* .container .quote {*/
   /*top: 69%;*/
