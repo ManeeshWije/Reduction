@@ -2,17 +2,12 @@
   "manifest_version": 2,
   "name": "Reduction",
   "description": "minimal new tab page",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "icons": { "128": "icon_128.png" },
   "browser_action": {
     "default_icon": "icon.png"
   },
-  "permissions": [
-    "http://*/",
-    "<all_urls>",
-    "https://*/",
-    "https://api.darksky.net/"
-  ],
+  "permissions": ["https://api.darksky.net/"],
   "author": {
     "name": "Maneesh Wijewardhana",
     "email": "m.mwije1@gmail.com",
