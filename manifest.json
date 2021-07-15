@@ -7,7 +7,12 @@
   "browser_action": {
     "default_icon": "icon.png"
   },
-
+  "permissions": [
+    "http://*/",
+    "<all_urls>",
+    "https://*/",
+    "https://api.darksky.net/"
+  ],
   "author": {
     "name": "Maneesh Wijewardhana",
     "email": "m.mwije1@gmail.com",
