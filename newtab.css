@@ -171,8 +171,9 @@ body {
 }
 .container .time {
   font-family: "Prata", serif;
+  /*cursor: pointer;*/
   color: rgb(255, 255, 255);
-  font-size: 160px;
+  font-size: 150px;
   position: absolute;
   font-weight: bold;
   text-shadow: 2px 2px 4px #000000;
@@ -217,9 +218,9 @@ a {
   display: flex;
   flex-direction: row;
   position: absolute;
-  top: 0px;
-  left: 0px;
-  padding-left: 10px;
+  justify-content: center;
+  top: -15px;
+  left: 30px;
   color: white;
   align-items: center;
   font-family: "PT Serif", serif;
@@ -230,10 +231,10 @@ a {
   display: flex;
   position: absolute;
   flex-direction: column;
-  left: 0px;
-  top: 71px;
+  left: 30px;
+  top: -10px;
+  margin-top: 70px;
   justify-content: center;
-  padding-left: 10px;
   align-content: center;
   color: white;
   font-family: "PT Serif", serif;
@@ -267,14 +268,14 @@ a {
   justify-content: center;
 }
 
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1400px) {
   /* .container .quote {*/
   /*top: 69%;*/
   /* }*/
   .container .time {
     font-size: 100px;
   }
-  .container .user {
-    top: 85%;
-  }
+  /* .container .user {*/
+  /*top: 85%;*/
+  /*}*/
 }

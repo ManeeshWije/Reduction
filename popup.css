@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Serif:400italic);
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Serif", serif;
+}
+
+body {
+  background-color: white;
+}
+.title h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.option-container {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+.option-container #btn1 {
+  margin-right: 10px;
+}

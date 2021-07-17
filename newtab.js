@@ -1,3 +1,28 @@
+let clock = () => {
+  let date = new Date();
+  let hrs = date.getHours();
+  let mins = date.getMinutes();
+  let secs = date.getSeconds();
+  let period = " AM";
+  if (hrs == 0) {
+    hrs = 12;
+  } else if (hrs >= 12) {
+    hrs = hrs - 12;
+    period = " PM";
+  }
+  hrs = hrs < 10 ? "0" + hrs : hrs;
+  mins = mins < 10 ? "0" + mins : mins;
+  secs = secs < 10 ? "0" + secs : secs;
+
+  let time = `${hrs}:${mins}:${secs}${period}`;
+  let time1 = `${hrs}:${mins}${period}`;
+  let TIME = document.querySelector(".time");
+
+  document.getElementById("clock").innerText = time1;
+  setTimeout(clock, 1000);
+};
+clock();
+
 function weather() {
   window.addEventListener("load", () => {
     let long;
@@ -9,6 +34,7 @@ function weather() {
     let locationTimezone = document.querySelector(".location-timezone");
     let temperatureSection = document.querySelector(".degree-section");
     let temperatureSpan = document.querySelector(".temperature span");
+    let weatherOption = document.querySelector(".weatherCheckbox");
 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
@@ -20,24 +46,24 @@ function weather() {
             return response.json();
           })
           .then((data) => {
-            console.log(data);
+            //console.log(data);
             const { temperature, summary, icon } = data.currently;
             let celsius = (temperature - 32) * (5 / 9);
             let fahrenheit = temperature * (9 / 5) + 32;
 
             temperatureDegree.textContent = Math.floor(celsius);
-            temperatureSpan.textContent = "C";
+            temperatureSpan.textContent = "°C";
             temperatureDescription.textContent = summary;
             locationTimezone.textContent = data.timezone;
 
             setIcons(icon, document.querySelector(".icon"));
 
             temperatureSection.addEventListener("click", () => {
-              if (temperatureSpan.textContent === "C") {
-                temperatureSpan.textContent = "F";
+              if (temperatureSpan.textContent === "°C") {
+                temperatureSpan.textContent = "°F";
                 temperatureDegree.textContent = temperature;
-              } else if (temperatureSpan.textContent === "F") {
-                temperatureSpan.textContent = "C";
+              } else if (temperatureSpan.textContent === "°F") {
+                temperatureSpan.textContent = "°C";
                 temperatureDegree.textContent = Math.floor(celsius);
               }
             });
@@ -59,36 +85,12 @@ function quotes() {
   fetch("https://api.quotable.io/random")
     .then((response) => response.json())
     .then((data) => {
-      console.log(`${data.content} —${data.author}`);
+      //console.log(`${data.content} —${data.author}`);
       quote = `${data.content} -${data.author}`;
       document.getElementById("quoteblock").innerHTML = quote;
     });
 }
 quotes();
-
-let clock = () => {
-  let date = new Date();
-  let hrs = date.getHours();
-  let mins = date.getMinutes();
-  let secs = date.getSeconds();
-  let period = " AM";
-  if (hrs == 0) {
-    hrs = 12;
-  } else if (hrs >= 12) {
-    hrs = hrs - 12;
-    period = " PM";
-  }
-  hrs = hrs < 10 ? "0" + hrs : hrs;
-  mins = mins < 10 ? "0" + mins : mins;
-  secs = secs < 10 ? "0" + secs : secs;
-
-  let time = `${hrs}:${mins}:${secs}${period}`;
-
-  document.getElementById("clock").innerText = time;
-
-  setTimeout(clock, 1000);
-};
-clock();
 
 var images = "";
 var user = "";
@@ -98,7 +100,7 @@ $.ajax({
   url:
     "https://api.unsplash.com/search/photos?query=land scape&orientation=landscape&client_id=WQeGSnwU4L1Z2bIRlSWOAlgazKegU7qG_lTbLcoJKMI",
   success: function (data) {
-    console.log(data);
+    //console.log(data);
     var randNum = Math.floor(Math.random() * 10);
     images = $("#image").append(
       `<img src=${data.results[randNum].urls.regular}/>`
