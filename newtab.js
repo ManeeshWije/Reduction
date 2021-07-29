@@ -95,12 +95,11 @@ quotes();
 var images = "";
 var user = "";
 
-$.ajax({
-  type: "GET",
-  url:
-    "https://api.unsplash.com/search/photos?query=land scape&orientation=landscape&client_id=WQeGSnwU4L1Z2bIRlSWOAlgazKegU7qG_lTbLcoJKMI",
-  success: function (data) {
-    //console.log(data);
+fetch(
+  "https://api.unsplash.com/search/photos/?query=landscape&orientation=landscape&order_by=relevant&client_id=WQeGSnwU4L1Z2bIRlSWOAlgazKegU7qG_lTbLcoJKMI"
+)
+  .then((response) => response.json())
+  .then((data) => {
     var randNum = Math.floor(Math.random() * 10);
     images = $("#image").append(
       `<img src=${data.results[randNum].urls.regular}/>`
@@ -108,9 +107,8 @@ $.ajax({
     user = $("#credits").append(
       // `<h3>Photo Credits: ${data.results[randNum].user.name}</h3>
       `
-			<a href="${data.results[randNum].user.links.html}">${data.results[randNum].user.name}</a>
-			<a href="https://unsplash.com/">Unsplash</a>
-			`
+<a href="${data.results[randNum].user.links.html}">${data.results[randNum].user.name}</a>
+<a href="https://unsplash.com/">Unsplash</a>
+`
     );
-  },
-});
+  });

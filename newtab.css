@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Serif:400italic);
 @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
 * {
-  overflow: visible;
+  overflow: hidden;
   margin: 0;
   padding: 0;
 }
@@ -144,7 +144,6 @@ body {
 
 .container {
   display: flex;
-  position: relative;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -152,10 +151,8 @@ body {
 }
 
 .container .unsplash img {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  animation: opacity;
-  animation-duration: 5s;
 }
 
 .container .quote {
