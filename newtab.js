@@ -96,7 +96,7 @@ var images = "";
 var user = "";
 
 fetch(
-  "https://api.unsplash.com/search/photos/?query=landscape&orientation=landscape&order_by=relevant&client_id=WQeGSnwU4L1Z2bIRlSWOAlgazKegU7qG_lTbLcoJKMI"
+  "https://api.unsplash.com/search/photos/?query=nature&orientation=landscape&order_by=relevant&client_id=WQeGSnwU4L1Z2bIRlSWOAlgazKegU7qG_lTbLcoJKMI"
 )
   .then((response) => response.json())
   .then((data) => {
