@@ -1,26 +1,17 @@
-let clock = () => {
+function clock() {
   let date = new Date();
-  let hrs = date.getHours();
-  let mins = date.getMinutes();
-  let secs = date.getSeconds();
-  let period = " AM";
-  if (hrs == 0) {
-    hrs = 12;
-  } else if (hrs >= 12) {
-    hrs = hrs - 12;
-    period = " PM";
-  }
-  hrs = hrs < 10 ? "0" + hrs : hrs;
-  mins = mins < 10 ? "0" + mins : mins;
-  secs = secs < 10 ? "0" + secs : secs;
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let ampm = hours >= 12 ? "pm" : "am";
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  let strTime = hours + ":" + minutes + " " + ampm;
 
-  let time = `${hrs}:${mins}:${secs}${period}`;
-  let time1 = `${hrs}:${mins}${period}`;
-  let TIME = document.querySelector(".time");
+  document.getElementById("clock").innerText = strTime;
 
-  document.getElementById("clock").innerText = time1;
   setTimeout(clock, 1000);
-};
+}
 clock();
 
 function weather() {
@@ -34,7 +25,7 @@ function weather() {
     let locationTimezone = document.querySelector(".location-timezone");
     let temperatureSection = document.querySelector(".degree-section");
     let temperatureSpan = document.querySelector(".temperature span");
-    let weatherOption = document.querySelector(".weatherCheckbox");
+    //let weatherOption = document.querySelector(".weatherCheckbox");
 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
@@ -101,7 +92,7 @@ fetch(
   .then((response) => response.json())
   .then((data) => {
     let randNum = Math.floor(Math.random() * 10);
-    console.log(data);
+    //console.log(data);
     images = $("#image").append(
       `<img src=${data.results[randNum].urls.regular}/>`
     );
