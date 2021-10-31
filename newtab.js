@@ -87,11 +87,11 @@ let images = "";
 let user = "";
 
 fetch(
-  "https://api.unsplash.com/search/photos/?query=Scenary&orientation=landscape&order_by=relevant&client_id=WQeGSnwU4L1Z2bIRlSWOAlgazKegU7qG_lTbLcoJKMI"
+  "https://api.unsplash.com/search/photos/?query=landscapes&orientation=landscape&order_by=popular&per_page=20&client_id=WQeGSnwU4L1Z2bIRlSWOAlgazKegU7qG_lTbLcoJKMI"
 )
   .then((response) => response.json())
   .then((data) => {
-    let randNum = Math.floor(Math.random() * 10);
+    let randNum = Math.floor(Math.random() * 20);
     //console.log(data);
     images = $("#image").append(
       `<img src=${data.results[randNum].urls.regular}/>`
