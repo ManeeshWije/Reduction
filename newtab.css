@@ -147,7 +147,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /*flex-wrap: wrap;*/
+  flex-wrap: wrap;
 }
 
 .container .unsplash img {
@@ -181,7 +181,7 @@ body {
   text-align: center;
   position: absolute;
   top: 34%;
-  margin-right: -60px;
+  margin-right: -10px;
   transform: rotate(20deg);
 }
 .user {
