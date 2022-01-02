@@ -14,13 +14,13 @@ function clock() {
 }
 clock();
 
-function play() {
-  document.getElementById("hat-id").addEventListener("click", () => {
-    let myAudio = new Audio("real-jingle.mp3");
-    myAudio.play();
-  });
-}
-play();
+//function play() {
+//document.getElementById("hat-id").addEventListener("click", () => {
+//let myAudio = new Audio("real-jingle.mp3");
+//myAudio.play();
+//});
+//}
+//play();
 
 function weather() {
   window.addEventListener("load", () => {
@@ -95,7 +95,7 @@ let images = "";
 let user = "";
 
 fetch(
-  "https://api.unsplash.com/search/photos/?query=christmas&orientation=landscape&order_by=popular&per_page=20&client_id=WQeGSnwU4L1Z2bIRlSWOAlgazKegU7qG_lTbLcoJKMI"
+  "https://api.unsplash.com/search/photos/?query=scenery&orientation=landscape&order_by=popular&per_page=20&client_id=WQeGSnwU4L1Z2bIRlSWOAlgazKegU7qG_lTbLcoJKMI"
 )
   .then((response) => response.json())
   .then((data) => {
