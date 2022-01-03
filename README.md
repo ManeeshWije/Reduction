@@ -3,5 +3,5 @@
 - Utilizes the Unplash API, DarkSky API, and Quotable API which are parsed/displayed in a prettified manner
 - Images and features are constantly being updated
 
-![Examples](./Screen Shot 2022-01-03 at 13.07.17.png)
-![Examples](./Screen Shot 2022-01-03 at 13.08.31.png)
+![Examples](1.png)
+![Examples](2.png)
