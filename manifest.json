@@ -9,11 +9,7 @@
 		"default_popup": "popup.html"
 	},
 	"permissions": ["https://api.darksky.net/"],
-	"author": {
-		"name": "Maneesh Wijewardhana",
-		"email": "m.mwije1@gmail.com",
-		"url": "https://www.linkedin.com/in/maneeshwije/"
-	},
+	"author": "Maneesh Wijewardhana",
 	"chrome_url_overrides": {
 		"newtab": "newtab.html"
 	}
