@@ -1,15 +1,23 @@
 {
-	"manifest_version": 3,
-	"name": "Reduction",
-	"description": "minimal new tab page",
-	"version": "1.2.3",
-	"icons": { "128": "icon_128.png" },
-	"action": {
-		"default_icon": "icon.png",
-		"default_popup": "popup.html"
-	},
-	"author": "Maneesh Wijewardhana",
-	"chrome_url_overrides": {
-		"newtab": "newtab.html"
-	}
+    "manifest_version": 3,
+    "name": "Reduction",
+    "description": "minimal new tab page",
+    "version": "1.2.3",
+    "icons": {
+        "128": "icon_128.png"
+    },
+    "action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "author": "Maneesh Wijewardhana",
+    "chrome_url_overrides": {
+        "newtab": "newtab.html"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "{7d5e960b-480e-434f-9257-bcc8a72102cb}",
+            "strict_min_version": "42.0"
+        }
+    }
 }
