@@ -39,21 +39,19 @@ function weather() {
       navigator.geolocation.getCurrentPosition((position) => {
         long = position.coords.longitude;
         lat = position.coords.latitude;
-        const api = `https://api.darksky.net/forecast/fd9d9c6418c23d94745b836767721ad1/${lat},${long}`;
-        // const api2 = `http://api.weatherapi.com/v1/current.json?key=e0d6eaff354547fbb76235310222002&q=${lat},${long}&aqi=no`;
+        const api = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lat},${long}?key=${WEATHER_API_KEY}`
         fetch(api)
           .then((response) => {
             return response.json();
           })
           .then((data) => {
-            // console.log(data);
-            const { temperature, summary, icon } = data.currently;
-            let celsius = (temperature - 32) * (5 / 9);
-            let fahrenheit = temperature * (9 / 5) + 32;
+            const { temp, conditions, icon } = data.currentConditions;
 
-            temperatureDegree.textContent = Math.floor(celsius);
+            let tempC = (temp - 32) * (5/9)
+
+            temperatureDegree.textContent = Math.floor(tempC);
             temperatureSpan.textContent = "°C";
-            temperatureDescription.textContent = summary;
+            temperatureDescription.textContent = conditions;
             locationTimezone.textContent = data.timezone;
 
             setIcons(icon, document.querySelector(".icon"));
@@ -61,10 +59,10 @@ function weather() {
             temperatureSection.addEventListener("click", () => {
               if (temperatureSpan.textContent === "°C") {
                 temperatureSpan.textContent = "°F";
-                temperatureDegree.textContent = temperature;
+                temperatureDegree.textContent = temp;
               } else if (temperatureSpan.textContent === "°F") {
                 temperatureSpan.textContent = "°C";
-                temperatureDegree.textContent = Math.floor(celsius);
+                temperatureDegree.textContent = Math.floor(tempC);
               }
             });
           });
