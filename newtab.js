@@ -92,7 +92,7 @@ function quotes() {
 quotes();
 
 fetch(
-    'https://api.unsplash.com/search/photos/?query=landscapes&orientation=landscape&order_by=popular&per_page=20&client_id=WQeGSnwU4L1Z2bIRlSWOAlgazKegU7qG_lTbLcoJKMI'
+    'https://api.unsplash.com/search/photos/?query=landscapes&orientation=landscape&order_by=relevant&per_page=20&client_id=WQeGSnwU4L1Z2bIRlSWOAlgazKegU7qG_lTbLcoJKMI'
 )
     .then((response) => response.json())
     .then((data) => {
